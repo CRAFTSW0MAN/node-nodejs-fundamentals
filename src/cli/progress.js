@@ -1,6 +1,5 @@
-import { argv } from "node:process";
 const progress = () => {
-  const args = argv.slice(2);
+  const args = process.argv.slice(2);
   const defaultDuration = 5000;
   const defaultInterval = 100;
   const defaultLength = 30;

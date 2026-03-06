@@ -12,10 +12,10 @@ const interactive = () => {
     switch (command) {
       case "exit":
         rl.close();
-        break;
+        return;
       case "uptime":
         const uptime = process.uptime().toFixed(2);
-        console.log(`${uptime} sec`);
+        console.log(`Uptime:${uptime}s`);
         break;
       case "cwd":
         const directory = process.cwd();

@@ -39,7 +39,6 @@ async function checkDirectory(pathUrl, mainPath, data) {
         elementDirectory.parentPath,
         elementDirectory.name,
       );
-      // console.log(elementDirectoryPath);
       const infoElementDirectory = await fs.stat(elementDirectoryPath);
       if (infoElementDirectory.isDirectory()) {
         data.push({

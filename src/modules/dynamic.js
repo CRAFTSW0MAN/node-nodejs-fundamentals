@@ -9,7 +9,12 @@ const dynamic = async () => {
   }
   const __filename = url.fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  const pluginPath = path.join(__dirname, "plugins", `${pluginName}.js`);
+  let pluginPath;
+  if (pluginName.endsWith(".js")) {
+    pluginPath = path.join(__dirname, "plugins", `${pluginName}`);
+  } else {
+    pluginPath = path.join(__dirname, "plugins", `${pluginName}.js`);
+  }
 
   const pluginUrl = url.pathToFileURL(pluginPath).href;
 

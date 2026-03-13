@@ -25,7 +25,7 @@ const filter = () => {
       }
     },
 
-    _flush(callback) {
+    flush(callback) {
       if (remainderChunk && remainderChunk.includes(pattern)) {
         callback(null, remainderChunk + "\n");
       } else {

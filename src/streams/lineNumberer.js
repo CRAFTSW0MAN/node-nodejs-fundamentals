@@ -26,7 +26,7 @@ const lineNumberer = () => {
       }
     },
 
-    _flush(callback) {
+    flush(callback) {
       if (remainderChunk.length > 0) {
         callback(null, `${lineNumber++} | ${remainderChunk}\n`);
       } else {
